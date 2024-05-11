@@ -1,0 +1,29 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+  thymeleaf:
+    cache: false
+
+  security:
+    user:
+      name: user
+      password: password
+
+  datasource:
+    url:
+    username:
+    password:
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.MariaDBDialect
+      format_sql: true
+      ddl-auto: update
+    show-sql: true
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
